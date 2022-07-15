@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_eat_drink"
+        android:icon="@drawable/icon_eat_drink"
+        android:title="@string/eat_drink" />
+
+    <item
+        android:id="@+id/menu_living_service"
+        android:icon="@drawable/icon_service"
+        android:title="@string/living_service" />
+    <item
+        android:id="@+id/menu_transfer"
+        android:icon="@drawable/icon_map"
+        android:title="@string/transfer" />
+
+    <item
+        android:id="@+id/menu_children"
+        android:icon="@drawable/icon_children"
+        android:title="@string/children" />
+
+    <item
+        android:id="@+id/menu_clothes"
+        android:icon="@drawable/icon_clothes"
+        android:title="@string/clothes" />
+
+    <item
+        android:id="@+id/menu_wedding_or_funeral"
+        android:icon="@drawable/icon_flower"
+        android:title="@string/wedding_or_funeral" />
+
+    <item
+        android:id="@+id/menu_healthy"
+        android:icon="@drawable/icon_healthy"
+        android:title="@string/healthy" />
+
+    <item
+        android:id="@+id/menu_travel"
+        android:icon="@drawable/icon_travel"
+        android:title="@string/travel" />
+
+    <item
+        android:id="@+id/menu_improve_myself"
+        android:icon="@drawable/icon_myself"
+        android:title="@string/improve_myself" />
+
+    <item
+        android:id="@+id/menu_bank"
+        android:icon="@drawable/icon_bank"
+        android:title="@string/bank" />
+
+</menu>

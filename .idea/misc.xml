@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/drawable/ic_account_navigation_checked.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/drawable/ic_add_circle_navigation.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1075" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1075" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/drawable/spinner_background.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/activity_testn.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/custom_dropdown_add_layout.xml" value="0.15" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/custom_sppiner_layout.xml" value="0.14" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/dialog_detail_category_layout.xml" value="0.1921875" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/layout/fragment_add.xml" value="0.12" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_detail_category.xml" value="0.18802083333333333" />
+        <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_detail_category_for_collecting.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/custom_dropdown_add_layout.xml" value="0.1921875" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/custom_sppiner_layout.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_add.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="androidx.room.Query" />
+    </list>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

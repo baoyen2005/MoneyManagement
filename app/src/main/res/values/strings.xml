@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MoneyManagementJava</string>
+    <string name="navigation_overview_title">Overview</string>
+    <string name="navigation_account_title">Account</string>
+    <string name="navigation_others_title">Others</string>
+    <string name="navigation_report_title">Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total_balance">Total balance</string>
+    <string name="revenue_and_expenditure_notes">Revenue and expenditure notes</string>
+    <string name="this_month">This month</string>
+    <string name="collecting">Collecting</string>
+    <string name="amount_of_money">Amount of money</string>
+    <string name="money">0 <u>đ</u></string>
+    <string name="save">Save</string>
+    <string name="eat_drink">Eat drink</string>
+    <string name="living_service">Living service</string>
+    <string name="transfer">Transfer</string>
+    <string name="children">Children</string>
+    <string name="clothes">Clothes</string>
+    <string name="wedding_or_funeral">Wedding or Funeral</string>
+    <string name="healthy">Healthy</string>
+    <string name="travel">Travel</string>
+    <string name="improve_myself">Improve myself</string>
+    <string name="bank">Bank</string>
+    <string name="salary">Salary</string>
+    <string name="rewards">Rewards</string>
+    <string name="saving">Saving</string>
+    <string name="gift">Gift</string>
+    <string name="add">Add</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_overview"
+        android:title="@string/navigation_overview_title"
+        android:icon="@drawable/selector_icon_overview_navigation"
+        />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_account"-->
+<!--        android:title="@string/navigation_account_title"-->
+<!--        android:icon="@drawable/selector_icon_account_navigation"-->
+<!--        />-->
+    <item
+        android:id="@+id/navigation_add"
+        android:title="@string/add"
+        android:icon="@drawable/selector_icon_add_navigation"
+        />
+<!--    <item-->
+<!--        android:id="@+id/navigation_report"-->
+<!--        android:title="@string/navigation_report_title"-->
+<!--        android:icon="@drawable/selector_icon_report_navigation"-->
+<!--        />-->
+
+    <item
+        android:id="@+id/navigation_others"
+        android:title="@string/navigation_others_title"
+        android:icon="@drawable/selector_icon_other_navigation"
+        />
+</menu>
