@@ -18,6 +18,7 @@ import com.example.moneymanagementjava.adapter.CustomSpinnerAdapter;
 import com.example.moneymanagementjava.adapter.DataBindingCustom;
 import com.example.moneymanagementjava.base.BaseFragment;
 import com.example.moneymanagementjava.base.BaseViewModel;
+import com.example.moneymanagementjava.callback.CallBackAddFragment;
 import com.example.moneymanagementjava.converter.ConvertDate;
 import com.example.moneymanagementjava.database.MoneyManagementDao;
 import com.example.moneymanagementjava.database.MoneyManagementDatabase;
@@ -28,9 +29,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-public class AddFragment extends BaseFragment {
-    private Spinner addTittleSpinner;
-    private CustomSpinnerAdapter spinnerAdapter;
+public class AddFragment extends BaseFragment implements CallBackAddFragment {
+
     private ArrayList<CustomSpinnerItem> customList;
     private EditText edtAmountOfMoney;
     private TextView txtContentMoneyType, txtDateAddMoney;
@@ -39,6 +39,7 @@ public class AddFragment extends BaseFragment {
     private String itemSpinnerName, detailCategory;
     private AddViewModel viewModel;
     private ConvertDate convertDate;
+    private int spinnerItemId = 0;
     private final String TAG = "addfragment";
 
     @Override
@@ -60,7 +61,7 @@ public class AddFragment extends BaseFragment {
      */
     @Override
     protected void initView(View view) {
-        addTittleSpinner = view.findViewById(R.id.addTittleSpinner);
+        Spinner addTittleSpinner = view.findViewById(R.id.addTittleSpinner);
         edtAmountOfMoney = view.findViewById(R.id.edtAmountOfMoney);
         txtContentMoneyType = view.findViewById(R.id.txtContentMoneyType);
         txtDateAddMoney = view.findViewById(R.id.txtDateAddMoney);
@@ -69,27 +70,11 @@ public class AddFragment extends BaseFragment {
         btnSaveMoney = view.findViewById(R.id.btnSaveMoney);
         customList = getCustomlist();
         convertDate = new ConvertDate();
-        spinnerAdapter = new CustomSpinnerAdapter(requireContext(), customList);
+        CustomSpinnerAdapter spinnerAdapter = new CustomSpinnerAdapter(requireContext(), customList);
         if (addTittleSpinner != null) {
             addTittleSpinner.setAdapter(spinnerAdapter);
+            DataBindingCustom.getInstance(this).itemSpinnerSelected(addTittleSpinner, requireContext());
 
-//            addTittleSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//                @Override
-//                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                    CustomSpinnerItem item  = (CustomSpinnerItem) parent.getSelectedItem();
-//                    itemSpinnerName = item.getSpinnerItemName();
-//                    Toast.makeText(requireActivity(), item.getSpinnerItemName(),Toast.LENGTH_SHORT).show();
-//
-//                }
-//
-//                @Override
-//                public void onNothingSelected(AdapterView<?> parent) {
-//
-//                }
-//            });
-
-            itemSpinnerName = DataBindingCustom.getInstance().itemSpinnerSelected(addTittleSpinner, requireContext());
-            Log.d(TAG, "initView: itemSpinnerName = "+itemSpinnerName);
         }
     }
 
@@ -111,10 +96,9 @@ public class AddFragment extends BaseFragment {
 
     private ArrayList<CustomSpinnerItem> getCustomlist() {
         customList = new ArrayList<>();
-        CustomSpinnerItem item1 = new CustomSpinnerItem(R.drawable.icon_minus_spending_money, "Spending");
-        CustomSpinnerItem item2 = new CustomSpinnerItem(R.drawable.icon_add_collect_money, "Collecting");
-
+        CustomSpinnerItem item1 = new CustomSpinnerItem(customList.size(), R.drawable.icon_minus_spending_money, "Spending");
         customList.add(item1);
+        CustomSpinnerItem item2 = new CustomSpinnerItem(customList.size(), R.drawable.icon_add_collect_money, "Collecting");
         customList.add(item2);
         return customList;
     }
@@ -138,22 +122,20 @@ public class AddFragment extends BaseFragment {
         imgNavigateChooseMoneyType.setOnClickListener(view -> {
             switch (itemSpinnerName) {
                 case "Spending": {
-                    detailCategory = DataBindingCustom.getInstance().itemPopupMenu(
+                    DataBindingCustom.getInstance(this).itemPopupMenu(
                             requireContext(), imgNavigateChooseMoneyType, R.menu.menu_expand_detail_category_for_spending
                     );
-                    Log.d(TAG, "getDetailCategory: Spending - " + detailCategory);
+
                     break;
                 }
                 case "Collecting": {
-                    detailCategory = DataBindingCustom.getInstance().itemPopupMenu(
+                    DataBindingCustom.getInstance(this).itemPopupMenu(
                             requireContext(), imgNavigateChooseMoneyType, R.menu.menu_expand_detail_category_for_collecting
                     );
-                    Log.d(TAG, "getDetailCategory: Collecting - " + detailCategory);
                     break;
                 }
             }
         });
-        txtContentMoneyType.setText(detailCategory);
     }
 
     /**
@@ -166,13 +148,33 @@ public class AddFragment extends BaseFragment {
             moneyManagement.setDetailCategory(detailCategory);
             moneyManagement.setAddedDate(convertDate.convertStringToDate(txtDateAddMoney.getText().toString()));
             moneyManagement.setTotalMoney(Float.parseFloat(edtAmountOfMoney.getText().toString()));
+            moneyManagement.setId(spinnerItemId);
             AsyncTask.execute(() -> {
                 viewModel.insertMoneyManagement(moneyManagement);
                 Handler handler = new Handler(requireContext().getMainLooper());
                 handler.post(
                         () -> Toast.makeText(requireContext(), "Insert successfully", Toast.LENGTH_SHORT).show());
+                        edtAmountOfMoney.setText("");
+                        txtContentMoneyType.setText("");
+                        txtDateAddMoney.setText(convertDate.convertDateToString(new Date()));
                 Log.d(TAG, "saveDataToDabase: successfully");
             });
         });
+    }
+
+    @Override
+    public void spinnerItemValueObserver(CustomSpinnerItem item) {
+        itemSpinnerName = item.getSpinnerItemName();
+        spinnerItemId = item.getId();
+        Log.d(TAG, "spinnerItemValueObserver: itemSpinnerName = " + itemSpinnerName);
+        Log.d(TAG, "spinnerItemValueObserver: spinnerItemId = " + spinnerItemId);
+
+    }
+
+    @Override
+    public void popUpMenuValue(String value) {
+        detailCategory = value;
+        Log.d(TAG, "popUpMenuValue: detailCategory = " + detailCategory);
+        txtContentMoneyType.setText(detailCategory);
     }
 }

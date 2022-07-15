@@ -24,6 +24,9 @@ public class MoneyManagement {
     @ColumnInfo
     private Date addedDate = new Date();
 
+    @ColumnInfo
+    private int spinnerItemId = 0;
+
     public int getId() {
         return id;
     }
@@ -62,5 +65,13 @@ public class MoneyManagement {
 
     public void setAddedDate(Date addedDate) {
         this.addedDate = addedDate;
+    }
+
+    public int getSpinnerItemId() {
+        return spinnerItemId;
+    }
+
+    public void setSpinnerItemId(int spinnerItemId) {
+        this.spinnerItemId = spinnerItemId;
     }
 }
