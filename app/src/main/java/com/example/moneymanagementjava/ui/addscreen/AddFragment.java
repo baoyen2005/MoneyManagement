@@ -1,4 +1,4 @@
-package com.example.moneymanagementjava.ui.addscreen;
+package com.example.moneymanagementjava.addscreen;
 
 import static com.example.moneymanagementjava.constant.ConstantValue.collecting;
 
@@ -25,6 +25,8 @@ import com.example.moneymanagementjava.converter.ConvertDate;
 import com.example.moneymanagementjava.database.MoneyManagementDatabase;
 import com.example.moneymanagementjava.model.CustomSpinnerItem;
 import com.example.moneymanagementjava.model.MoneyManagement;
+import com.example.moneymanagementjava.ui.addscreen.AddViewModel;
+import com.example.moneymanagementjava.ui.addscreen.DatePickerFragmentDialog;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -43,11 +45,6 @@ public class AddFragment extends BaseFragment implements CallBackAddFragment {
     private ConvertDate convertDate;
     private int spinnerItemId = 0;
     private final String TAG = "addfragment";
-
-    public AddFragment() {
-        super();
-    }
-
 
     @Override
     protected int layoutId() {
