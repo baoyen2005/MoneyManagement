@@ -1,23 +1,16 @@
-package com.example.moneymanagementjava.mainactivity;
+package com.example.moneymanagementjava.ui.mainactivity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.example.moneymanagementjava.R;
 import com.example.moneymanagementjava.adapter.ViewPagerAdapter;
-import com.example.moneymanagementjava.addscreen.AddFragment;
 import com.example.moneymanagementjava.base.BaseActivity;
 import com.example.moneymanagementjava.base.BaseViewModel;
 import com.example.moneymanagementjava.databinding.ActivityMainBinding;
-import com.example.moneymanagementjava.otherscreen.OtherFragment;
-import com.example.moneymanagementjava.overviewscreen.OverviewFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.example.moneymanagementjava.ui.addscreen.AddFragment;
+import com.example.moneymanagementjava.ui.myaccountscreen.MyAccountFragment;
+import com.example.moneymanagementjava.ui.overviewscreen.OverviewFragment;
 
 public class MainActivity extends BaseActivity {
     private ViewPager2 viewPager2;
@@ -25,7 +18,7 @@ public class MainActivity extends BaseActivity {
     private ViewPagerAdapter viewPagerAdapter;
     private OverviewFragment overviewFragment;
     private AddFragment addFragment;
-    private OtherFragment otherFragment;
+    private MyAccountFragment myAccountFragment;
 
     @Override
     protected int layoutId() {
@@ -37,7 +30,7 @@ public class MainActivity extends BaseActivity {
         viewPager2 = findViewById(R.id.viewPagerMainActivity);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         addFragment = new AddFragment();
-        otherFragment = new OtherFragment();
+        myAccountFragment = new MyAccountFragment();
         overviewFragment = new OverviewFragment();
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
 
@@ -59,7 +52,7 @@ public class MainActivity extends BaseActivity {
     private void setViewPager() {
         viewPagerAdapter.addFragment(overviewFragment);
         viewPagerAdapter.addFragment(addFragment);
-        viewPagerAdapter.addFragment(otherFragment);
+        viewPagerAdapter.addFragment(myAccountFragment);
         binding.viewPagerMainActivity.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         binding.viewPagerMainActivity.setAdapter(viewPagerAdapter);
         binding.viewPagerMainActivity.registerOnPageChangeCallback(
@@ -100,7 +93,7 @@ public class MainActivity extends BaseActivity {
                 binding.viewPagerMainActivity.setCurrentItem(1);
                 return true;
             } else {
-                new OtherFragment();
+                new MyAccountFragment();
                 binding.viewPagerMainActivity.setCurrentItem(3);
             }
             return true;

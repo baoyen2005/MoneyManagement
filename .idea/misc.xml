@@ -17,9 +17,26 @@
         <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
         <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_detail_category.xml" value="0.18802083333333333" />
         <entry key="..\:/Code/VcCorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_detail_category_for_collecting.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/ic_other_navigation.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/ic_other_navigation_checked.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/ic_overview_navigation_checked.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/ic_report_navigation_checked.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/selector_icon_overview_navigation.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/drawable/selector_icon_report_navigation.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/custom_dialog_update.xml" value="0.21" />
         <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/custom_dropdown_add_layout.xml" value="0.1921875" />
         <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/custom_sppiner_layout.xml" value="0.1" />
         <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_add.xml" value="0.1921875" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_my_account.xml" value="0.15" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_my_saving.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_other.xml" value="0.18" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/fragment_overview.xml" value="0.25" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/layout/item_layout_recycle_money_management.xml" value="0.1" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_detail_category_for_spending.xml" value="0.1921875" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/menu/menu_expand_time.xml" value="0.1921875" />
+        <entry key="..\:/Vccorp/MoneyManagementJava/app/src/main/res/menu/menu_option_in_my_acc.xml" value="0.1921875" />
       </map>
     </option>
   </component>

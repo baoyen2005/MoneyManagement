@@ -1,4 +1,4 @@
-package com.example.moneymanagementjava.addscreen;
+package com.example.moneymanagementjava.ui.addscreen;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -6,7 +6,6 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;

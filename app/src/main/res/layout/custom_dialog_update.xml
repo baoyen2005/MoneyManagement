@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.addscreen.AddFragment">
-
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
     <Spinner
-        android:id="@+id/addTittleSpinner"
+        android:id="@+id/spinnerCustomDialog"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/spinner_background"
@@ -17,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtTitleMoney"
+        android:id="@+id/txtUpdateTitleMoneyCustomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -25,10 +22,10 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addTittleSpinner" />
+        app:layout_constraintTop_toBottomOf="@id/spinnerCustomDialog" />
 
     <EditText
-        android:id="@+id/edtAmountOfMoney"
+        android:id="@+id/edtUpdateAmountOfMoney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="0"
@@ -38,30 +35,30 @@
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTitleMoney" />
+        app:layout_constraintTop_toBottomOf="@id/txtUpdateTitleMoneyCustomDialog" />
 
     <TextView
-        android:id="@+id/txtContentMoneyType"
+        android:id="@+id/txtUpdateContentMoneyType"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:padding="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/imgNavigateChooseMoneyType"
-        app:layout_constraintTop_toBottomOf="@id/edtAmountOfMoney" />
+        app:layout_constraintRight_toLeftOf="@id/imgNavigateUpdateMoneyType"
+        app:layout_constraintTop_toBottomOf="@id/edtUpdateAmountOfMoney" />
 
 
     <ImageView
-        android:id="@+id/imgNavigateChooseMoneyType"
+        android:id="@+id/imgNavigateUpdateMoneyType"
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_baseline_navigate_next_24"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtAmountOfMoney" />
+        app:layout_constraintTop_toBottomOf="@id/edtUpdateAmountOfMoney" />
 
 
     <ImageView
-        android:id="@+id/imgDateAddMoney"
+        android:id="@+id/imgUpdateDateCustomDialog"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -69,23 +66,23 @@
         android:padding="10dp"
         android:src="@drawable/ic_baseline_date_range_24"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgNavigateChooseMoneyType" />
+        app:layout_constraintTop_toBottomOf="@id/imgNavigateUpdateMoneyType" />
 
     <TextView
 
-        android:id="@+id/txtDateAddMoney"
+        android:id="@+id/txtUpdateDateCustomDialog"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:padding="10dp"
         android:textSize="20sp"
-        app:layout_constraintLeft_toRightOf="@id/imgDateAddMoney"
+        app:layout_constraintLeft_toRightOf="@id/imgUpdateDateCustomDialog"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgNavigateChooseMoneyType" />
+        app:layout_constraintTop_toBottomOf="@id/imgNavigateUpdateMoneyType" />
 
     <Button
-        android:id="@+id/btnSaveMoney"
+        android:id="@+id/btnSaveMoneyCustomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -97,6 +94,22 @@
         android:textSize="22sp"
         app:backgroundTint="@null"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnCancelMoneyCustomDialog"
+        app:layout_constraintTop_toBottomOf="@id/txtUpdateDateCustomDialog" />
+
+    <Button
+        android:id="@+id/btnCancelMoneyCustomDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_blue_bright"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:backgroundTint="@null"
+        app:layout_constraintLeft_toRightOf="@id/btnSaveMoneyCustomDialog"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtDateAddMoney" />
+        app:layout_constraintTop_toBottomOf="@id/txtUpdateDateCustomDialog" />
 </androidx.constraintlayout.widget.ConstraintLayout>

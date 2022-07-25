@@ -7,16 +7,12 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 
-import com.example.moneymanagementjava.constant.ConstantValue;
 import com.example.moneymanagementjava.converter.ConverterClass;
 import com.example.moneymanagementjava.model.MoneyManagement;
-import com.example.moneymanagementjava.model.SavingMoney;
-import com.example.moneymanagementjava.model.SpendingMoney;
 
-@Database(entities = {SavingMoney.class, SpendingMoney.class, MoneyManagement.class},
+@Database(entities = {MoneyManagement.class},
         version = 1, exportSchema = false)
 @TypeConverters(ConverterClass.class)
 
