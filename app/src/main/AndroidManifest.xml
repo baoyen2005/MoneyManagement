@@ -14,10 +14,7 @@
         android:theme="@style/Theme.MoneyManagementJava"
         tools:targetApi="31">
         <activity
-            android:name=".testnActivity"
-            android:exported="false" />
-        <activity
-            android:name=".mainactivity.MainActivity"
+            android:name=".ui.mainactivity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,8 +4,6 @@ import androidx.lifecycle.LiveData;
 
 import com.example.moneymanagementjava.database.MoneyManagementDao;
 import com.example.moneymanagementjava.model.MoneyManagement;
-import com.example.moneymanagementjava.model.SavingMoney;
-import com.example.moneymanagementjava.model.SpendingMoney;
 
 import java.util.List;
 
@@ -15,30 +13,9 @@ public class DataProviderImpl implements DataProvider {
     public DataProviderImpl(MoneyManagementDao managementDao) {
         this.managementDao = managementDao;
     }
-
-    @Override
-    public void insertSavingMoney(SavingMoney savingMoney) {
-        managementDao.insertSavingMoney(savingMoney);
-    }
-
-    @Override
-    public void insertSpendingMoney(SpendingMoney spendingMoney) {
-        managementDao.insertSpendingMoney(spendingMoney);
-    }
-
     @Override
     public void insertMoneyManagement(MoneyManagement moneyManagement) {
         managementDao.insertMoneyManagement(moneyManagement);
-    }
-
-    @Override
-    public LiveData<List<SpendingMoney>> getAllSpending() {
-        return managementDao.getAllSpending();
-    }
-
-    @Override
-    public LiveData<List<SavingMoney>> getAllSavingMoney() {
-        return managementDao.getAllSavingMoney();
     }
 
     @Override
@@ -47,12 +24,12 @@ public class DataProviderImpl implements DataProvider {
     }
 
     @Override
-    public void deleteSavingMoney(SavingMoney savingMoney) {
-        managementDao.deleteSavingMoney(savingMoney);
+    public int deleteMoneyManagement(MoneyManagement... moneyManagement) {
+        return managementDao.deleteMoneyManagement(moneyManagement);
     }
 
     @Override
-    public void deleteSpendingMoney(SpendingMoney spendingMoney) {
-        managementDao.deleteSpendingMoney(spendingMoney);
+    public void updateMoneyManagement(MoneyManagement moneyManagement) {
+        managementDao.updateMoneyManagement(moneyManagement);
     }
 }

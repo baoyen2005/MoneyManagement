@@ -1,4 +1,4 @@
-package com.example.moneymanagementjava.addscreen;
+package com.example.moneymanagementjava.ui.addscreen;
 
 import com.example.moneymanagementjava.DataProviderImpl;
 import com.example.moneymanagementjava.base.BaseViewModel;
@@ -15,5 +15,10 @@ public class AddViewModel extends BaseViewModel {
 
     public void insertMoneyManagement(MoneyManagement moneyManagement){
         dataProvider.insertMoneyManagement(moneyManagement);
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
     }
 }
